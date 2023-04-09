@@ -1,13 +1,13 @@
 repeat wait() until game:IsLoaded() and game:WaitForChild"Players"
 
 local Players, RStorage, RService, TPService, SGui = game:GetService"Players", game:GetService"ReplicatedStorage", game:GetService"RunService", game:GetService"TeleportService", game:GetService"StarterGui";
-local Client, Camera, CF, Vec3, UD, UD2, Prefix = Players.LocalPlayer, workspace.CurrentCamera, CFrame.new, Vector3.new, UDim.new, UDim2.new, "/e ";
+local Client, Camera, CF, Vec3, UD, UD2, Prefix = Players.LocalPlayer, workspace.CurrentCamera, CFrame.new, Vector3.new, UDim.new, UDim2.new, ".";
 local Feloop, Spamming, FeloopTarget, WordToSpam = false, false, nil, nil;
 local BlacklistedItems, Commands, LoadingTime = {"BoomBox", "Radio", "DualGoldenSuperFlyBoombox"}, {}, tick();
     
 coroutine.wrap(function()
     if not getrawmetatable then 
-        return Notify("xaxa", "Exploit not supported, function missing: getrawmetatable", "", 3)
+        return Notify("iceify", "Exploit not supported, function missing: getrawmetatable", "", 3)
     end
 end)()
 
@@ -36,9 +36,9 @@ function PrintCommands()
     local ToPrint = [[
     
     
-FeKill/Loop/Fling - by xix on v3rm/xaxa/zxciaz/fiviefourteen
+FeKill/Loop/Fling - by IceifyHub (doesnt work in all games)
 =================================================
-Commands (Make sure to put /e or your prefix before them):
+Commands (Make sure to put . before them):
 ==========================================================
 ]]..CommandFound..[[
 
@@ -61,7 +61,7 @@ function GetPlayer(Name)
     if FoundPlayer and FoundPlayer ~= nil then 
         return FoundPlayer
     else 
-        return Notify("xaxa", "Player not found!", "", 3)
+        return Notify("iceify", "Player not found!", "", 3)
     end
 end
 
@@ -104,13 +104,13 @@ function ChattedEvent(Msg)
             if args[2] then 
                 FeloopTarget = GetPlayer(args[2])
                 if FeloopTarget and FeloopTarget ~= nil and FeloopTarget ~= tostring(Client) then 
-                    Feloop = true;ResetCharacter();Notify("xaxa", "Feloop Target: "..tostring(FeloopTarget), "", 3)
+                    Feloop = true;ResetCharacter();Notify("iceify", "Feloop Target: "..tostring(FeloopTarget), "", 3)
                 end
             elseif not args[2] then 
-                Feloop = true;Notify("xaxa", "Feloop: "..tostring(Feloop), "", 3)
+                Feloop = true;Notify("iceify", "Feloop: "..tostring(Feloop), "", 3)
             end
         elseif args[1] == "unfeloop" or args[1] == "unfekill" or args[1] == "unfe" or args[1] == "unkill"  then 
-            Feloop = false;ResetCharacter();Notify("xaxa", "Feloop: "..tostring(Feloop), "", 3)
+            Feloop = false;ResetCharacter();Notify("iceify", "Feloop: "..tostring(Feloop), "", 3)
         elseif args[1] == "rejoin" or args[1] == "rj" then 
             TPService:Teleport(game.PlaceId, Client)
         end
@@ -208,5 +208,5 @@ Players.PlayerRemoving:Connect(function(Player)
     end
 end)
  
-Notify("xaxa", "PRESS F9 FOR THE FUCKING COMMANDS", "", 3)
-Notify("xaxa", "Script loaded in: "..string.sub(tostring(tick() - LoadingTime), 1, 6), "", 3)
+Notify("IceifyHub", "PRESS F9 FOR THE COMMANDS FUCKING SKIDNIGGER FAG ", "", 3)
+Notify("IceifyHub", "Script loaded in: "..string.sub(tostring(tick() - LoadingTime), 1, 6), "", 3)
