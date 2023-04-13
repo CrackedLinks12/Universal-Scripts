@@ -208,5 +208,5 @@ Players.PlayerRemoving:Connect(function(Player)
     end
 end)
  
-Notify("IceifyHub", "PRESS F9 FOR THE COMMANDS FUCKING SKIDNIGGER FAG ", "", 3)
+Notify("IceifyHub", "PRESS F9 FOR THE COMMANDS (credit to the original owners I forgot who they where) ", "", 3)
 Notify("IceifyHub", "Script loaded in: "..string.sub(tostring(tick() - LoadingTime), 1, 6), "", 3)
